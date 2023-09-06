@@ -53,12 +53,11 @@
 				key-positions = <2 3>;
 				bindings = <&kp PLUS>;
 			};
-// 			// internal-left & external-right thumb keys
-// 			combo_sym2 {
-// 					timeout-ms = <200>;
-// 					key-positions = <31 33>;
-// 					bindings = <&mo SYM2>;
-// 			};
+			combo_tmux {
+					timeout-ms = <200>;
+					key-positions = <16 33>;
+					bindings = <LC(B)>;
+			};
 // 			// both left thumb keys
 // 			combo_settings {
 // 					timeout-ms = <300>;
