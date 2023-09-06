@@ -46,14 +46,13 @@
 	};
 
 
-//	combos {
-//		compatible = "zmk,combos";
-//			// both right thumb keys
-//			combo_plus {
-//				timeout-ms = <300>;
-//				key-positions = <3 4>;
-//				bindings = <&kp PLUS>;
-//			};
+	combos {
+		compatible = "zmk,combos";
+			combo_plus {
+				timeout-ms = <300>;
+				key-positions = <3 4>;
+				bindings = <&kp PLUS>;
+			};
 // 			// internal-left & external-right thumb keys
 // 			combo_sym2 {
 // 					timeout-ms = <200>;
@@ -66,7 +65,7 @@
 // 					key-positions = <30 31>;
 // 					bindings = <&mo SETTINGS>;
 // 			};
-//     };
+	};
 
 	keymap {
 		compatible = "zmk,keymap";
