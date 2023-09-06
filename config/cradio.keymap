@@ -82,7 +82,7 @@
 			>;
 		};
 
-		// Numbers and high frequency symbols
+		// Lower
 		lower_layer {
 			bindings = <
 				&kp F8 &kp F7 &kp F6 &kp F5 &kp F16		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
