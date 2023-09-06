@@ -21,10 +21,6 @@
 	quick-tap-ms = <125>;
 };
 
-&sk {
-	ignore-modifiers;
-};
-
 / {
 	conditional_layers {
 		compatible = "zmk,conditional-layers";
