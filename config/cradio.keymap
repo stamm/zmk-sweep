@@ -54,9 +54,9 @@
 				bindings = <&kp PLUS>;
 			};
 			combo_tmux {
-					timeout-ms = <200>;
-					key-positions = <16 33>;
-					bindings = <LC(B)>;
+				timeout-ms = <200>;
+				key-positions = <16 33>;
+				bindings = <&kp LC(B)>;
 			};
 // 			// both left thumb keys
 // 			combo_settings {
