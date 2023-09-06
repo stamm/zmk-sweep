@@ -71,7 +71,6 @@
 	keymap {
 		compatible = "zmk,keymap";
 
-		// Base alpha layer
 		default_layer {
 			bindings = <
 				&kp Q &kp W &kp E &kp R &kp T                                 &kp Y &kp U  &kp I     &kp O   &kp P
@@ -81,7 +80,6 @@
 			>;
 		};
 
-		// Lower
 		lower_layer {
 			bindings = <
 				&kp F8 &kp F7 &kp F6 &kp F5 &kp F16		                                    &kp IT_MINUS &kp N4 &kp N5 &kp N6 &kp F17
@@ -90,53 +88,24 @@
 																											&trans  &trans       &trans &trans
 			>;
 		};
-	raise_layer {
-		bindings = <
-		&trans  &trans &trans  &kp EQUAL  &trans                               &kp BSPC  &trans &trans &trans &trans
-		&mt LALT GRAVE &mt LCTL BSLH &mt LSHIFT LBRC &mt RBRC F1 SQT           &kp LEFT &mt RGUI DOWN  &mt RSHIFT UP &mt RCTRL RIGHT &trans
-		&trans  &kp UNDER &kp LPAR &kp RPAR   &kp IT_MINUS                     &kp C_PLAY_PAUSE &kp C_NEXT &kp C_VOL_UP &kp C_VOL_DN &trans
-																										&trans  &trans       &trans &trans
-		>;
-	};
 
-		// Adjust
-	adjust_layer {
-		bindings = <
-			&bootloader &none &none &bt BT_CLR &bt BT_SEL 0                  &bt BT_SEL 3 &none &none &none &none
-			&none &none &none &none &bt BT_SEL 1                  &bt BT_SEL 4 &none &none &none &none
-			&none &none &none &none &bt BT_SEL 2                  &bt BT_SEL 5 &none &none &none &none
-						 						&none &none              &none &none
-		>;
-	};
+		raise_layer {
+			bindings = <
+			&trans  &trans &trans  &kp EQUAL  &trans                               &kp BSPC  &trans &trans &trans &trans
+			&mt LALT GRAVE &mt LCTL BSLH &mt LSHIFT LBRC &mt RBRC F1 SQT           &kp LEFT &mt RGUI DOWN  &mt RSHIFT UP &mt RCTRL RIGHT &trans
+			&trans  &kp UNDER &kp LPAR &kp RPAR   &kp IT_MINUS                     &kp C_PLAY_PAUSE &kp C_NEXT &kp C_VOL_UP &kp C_VOL_DN &trans
+																											&trans  &trans       &trans &trans
+			>;
+		};
 
-					// Low frequency symbols.
-	//        		symbols_2_layer {
-	// 		bindings = <
-	// 		&kp IT_CARET &kp IT_UNDER &kp IT_PND &kp IT_EUR &kp IT_HASH         &none &none &none &none &none 
-	// 		&kp IT_BKTK &kp IT_TILDE &kp IT_BSLH &kp IT_PIPE &kp IT_AND         &none &none &none &none &none
-	// 		&none 			&none 			 &kp IT_SECT &kp IT_CCED &kp IT_DEG				  &none &none &none &none &none
-	//           				           												&none &none        	&none &none 
-	// 		>;
-// 		};
-// 
-//         // Used to type regional accents.
-//        		accent_layer {
-// 		bindings = <
-// 		&none &none &none &kp IT_CEGR &none                         &none &none &none &none &none 
-// 		&kp IT_AGRV &kp IT_IGRV &kp IT_OGRV &kp IT_EGRV &kp IT_EACU &none &none &none &none &none
-// 		&none &none &none &kp IT_UGRV &none                         &none &none &none &none &none
-//           				     &none &none                         &none &none 
-// 		>;
-// 		};
-// 
-//         // Used to change the keyboard's settings.
-//        		settings_layer {
-// 		bindings = <
-// 		&bootloader &none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader 
-// 		&none &none &none &none      &bt BT_SEL 1 						  &bt BT_SEL 4 &none &none &none &none
-// 		&none &none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none &none &none
-//           				     &none &none                         &none &none 
-// 		>;
-// 		};
+		adjust_layer {
+			bindings = <
+				&bootloader &none &none &bt BT_CLR &bt BT_SEL 0                  &bt BT_SEL 3 &none &none &none &none
+				&none &none &none &none &bt BT_SEL 1                  &bt BT_SEL 4 &none &none &none &none
+				&none &none &none &none &bt BT_SEL 2                  &bt BT_SEL 5 &none &none &none &none
+													&none &none              &none &none
+			>;
+		};
+
 	};
 };
