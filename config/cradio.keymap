@@ -92,14 +92,14 @@
 		};
 
 		// Main modifiers and arrow keys
-// 		raise_layer {
-// 			bindings = <
-// 			&kp ESC  &trans &trans  &trans  &trans    			        &kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
-// 			&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
-// 			&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
-// 																		&trans &kp LCTRL    &kp ENTER  &mo FNC
-// 			>;
-// 		};
+ 		raise_layer {
+ 			bindings = <
+ 			&trans  &trans &trans  &kp EQUAL  &trans                               &kp BSPC  &trans &trans &trans &trans
+			&mt LALT GRAVE &mt LCTL BSLH &mt LSHIFT LBRC &mt RBRC F1 SQT           &kp LEFT &mt RGUI DOWN  &mt RSHIFT UP &mt RCTRL RIGHT &trans
+ 			&trans  &kp UNDER &kp LPAR &kp RPAR   &kp IT_MINUS                     &kp C_PLAY_PAUSE &kp C_NEXT &kp C_VOL_UP &kp C_VOL_DN &trans
+																											&trans  &trans       &trans &trans
+ 			>;
+ 		};
 // 
 // 		// Function keys with modifiers
 // 		adjust_layer {
