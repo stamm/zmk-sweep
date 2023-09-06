@@ -50,7 +50,7 @@
 		compatible = "zmk,combos";
 			combo_plus {
 				timeout-ms = <300>;
-				key-positions = <3 4>;
+				key-positions = <2 3>;
 				bindings = <&kp PLUS>;
 			};
 // 			// internal-left & external-right thumb keys
