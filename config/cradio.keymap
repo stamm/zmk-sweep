@@ -85,15 +85,12 @@
 		// Lower
 		lower_layer {
 			bindings = <
-				&kp F8 &kp F7 &kp F6 &kp F5 &kp F16		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-				&kp F4 &kp F3 &kp F2 &kp F1 &trans  &kp IT_EQL &kp IT_QUES &kp IT_SQUOT &kp IT_MINUS &kp IT_AST
-				&kp IT_GREAT &kp IT_PERC &kp IT_RPAR &kp IT_RBRC &kp IT_RBKT 	&kp IT_AT &kp IT_EXCL &kp IT_DQUOT &kp IT_PLUS &kp IT_FSLH
-																											&mo FNC  &mo SYM2       &trans &trans
+				&kp F8 &kp F7 &kp F6 &kp F5 &kp F16		                                    &kp IT_MINUS &kp N4 &kp N5 &kp N6 &kp F17
+				&mt LALT F4 &mt LCTL F3 &mt LSHIFT F2 &mt LGUI F1 &trans           &kp DOT &mt RGUI N0  &mt RSHIFT N1     &mt RCTRL N2 &mt RALT N3
+				&kp F12 &kp F11 &kp F10 &kp F9 &kp IT_MINUS 	                     &kp IT_PLUS &kp N9 &kp N8 &kp N7 &kp IT_FSLH
+																											&trans  &trans       &trans &trans
 			>;
 		};
-//       KC_F8,   KC_F7,   KC_F6,   KC_F5,  KC_F16,                     KC_MINUS,    KC_4,    KC_5,    KC_6,  KC_F17,
-//       LA(KC_F4), LC(KC_F3), LS(KC_F2), LG(KC_F1), _______,        KC_KP_DOT,RG(KC_0),RS(KC_1),RC(KC_2),RA(KC_3),
-//       KC_F12,   KC_F11,  KC_F10,   KC_F9,KC_MINUS,                      KC_PLUS,    KC_9,    KC_8,    KC_7, KC_SLSH,
 
 		// Main modifiers and arrow keys
 		raise_layer {
