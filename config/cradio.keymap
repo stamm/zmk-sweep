@@ -49,6 +49,16 @@
 
 	combos {
 		compatible = "zmk,combos";
+			combo_minus {
+				timeout-ms = <300>;
+				key-positions = <13 16>;
+				bindings = <&kp MINUS>;
+			};
+			combo_quote {
+				timeout-ms = <300>;
+				key-positions = <12 17>;
+				bindings = <&kp SQT>;
+			};
 			combo_plus {
 				timeout-ms = <300>;
 				key-positions = <2 3>;
@@ -59,12 +69,11 @@
 				key-positions = <16 33>;
 				bindings = <&kp LC(B)>;
 			};
-// 			// both left thumb keys
-// 			combo_settings {
-// 					timeout-ms = <300>;
-// 					key-positions = <30 31>;
-// 					bindings = <&mo SETTINGS>;
-// 			};
+			combo_bkspace {
+				timeout-ms = <300>;
+				key-positions = <6 7>;
+				bindings = <&kp BSPC>;
+			};
 	};
 
 	keymap {
