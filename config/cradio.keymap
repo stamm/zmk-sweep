@@ -91,7 +91,7 @@
 		raise_layer {
 			bindings = <
 				&trans  &trans &trans  &kp EQUAL  &trans                               &kp BSPC  &trans &trans &trans &trans
-				&mt LALT GRAVE &mt LCTL BSLH &mt LSHIFT LBRC &mt RBRC F1           &kp LEFT &mt RGUI DOWN  &mt RSHIFT UP &mt RCTRL RIGHT &trans
+				&mt LALT GRAVE &mt LCTL BSLH &mt LSHIFT LBRC &mt LGUIE RBRC &kp SQT           &kp LEFT &mt RGUI DOWN  &mt RSHIFT UP &mt RCTRL RIGHT &trans
 				&trans  &kp UNDER &kp LPAR &kp RPAR   &kp MINUS                     &kp C_PLAY_PAUSE &kp C_NEXT &kp C_VOL_UP &kp C_VOL_DN &trans
 																												&trans  &trans       &trans &trans
 			>;
