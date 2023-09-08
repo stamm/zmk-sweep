@@ -46,27 +46,27 @@
 	combos {
 		compatible = "zmk,combos";
 			combo_minus {
-				timeout-ms = <300>;
+				timeout-ms = <100>;
 				key-positions = <13 16>;
 				bindings = <&kp MINUS>;
 			};
 			combo_quote {
-				timeout-ms = <300>;
+				timeout-ms = <100>;
 				key-positions = <12 17>;
 				bindings = <&kp SQT>;
 			};
 			combo_plus {
-				timeout-ms = <300>;
+				timeout-ms = <100>;
 				key-positions = <2 3>;
 				bindings = <&kp PLUS>;
 			};
 			combo_tmux {
-				timeout-ms = <200>;
+				timeout-ms = <100>;
 				key-positions = <16 33>;
 				bindings = <&kp LC(B)>;
 			};
 			combo_bkspace {
-				timeout-ms = <300>;
+				timeout-ms = <100>;
 				key-positions = <6 7>;
 				bindings = <&kp BSPC>;
 			};
