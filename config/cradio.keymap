@@ -53,7 +53,7 @@
 				bindings = <&kp PLUS>;
 			};
 			combo_tmux {
-				timeout-ms = <100>;
+				timeout-ms = <60>;
 				key-positions = <16 33>;
 				bindings = <&kp LC(B)>;
 			};
