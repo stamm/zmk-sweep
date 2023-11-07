@@ -62,6 +62,16 @@
 				key-positions = <6 7>;
 				bindings = <&kp BSPC>;
 			};
+			combo_inc {
+				timeout-ms = <100>;
+				key-positions = <3 6>;
+				bindings = <&mt LGUI PLUS>;
+			};
+			combo_dec {
+				timeout-ms = <100>;
+				key-positions = <4 5>;
+				bindings = <&mt LGUI MINUS>;
+			};
 	};
 
 	keymap {
