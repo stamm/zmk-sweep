@@ -65,12 +65,12 @@
 			combo_inc {
 				timeout-ms = <100>;
 				key-positions = <3 6>;
-				bindings = <&mt LGUI PLUS>;
+				bindings = <&kp LGUI PLUS>;
 			};
 			combo_dec {
 				timeout-ms = <100>;
 				key-positions = <4 5>;
-				bindings = <&mt LGUI MINUS>;
+				bindings = <&kp LGUI>, <&kp MINUS>;
 			};
 	};
 
