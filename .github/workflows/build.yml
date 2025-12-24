@@ -55,6 +55,16 @@ jobs:
 
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 cradio_right_nice_nano.uf2
+
+        
+      - name: West Build (Cradio/Sweep reset)
+        run: west build --pristine -s zmk/app -b settings_reset -- -DSHIELD=cradio_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+
+      - name: Cradio/Sweep reset Kconfig file
+        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
+
+      - name: Rename zmk.uf2
+        run: cp build/zephyr/zmk.uf2 cradio_settings_reset.uf2
         
       - name: Archive
         uses: actions/upload-artifact@v4
