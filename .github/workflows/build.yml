@@ -70,4 +70,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: firmware-zmk-sweep
-          path: cradio_*_nice_nano_v2.uf2
+          path: cradio_*.uf2
