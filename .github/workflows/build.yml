@@ -39,7 +39,7 @@ jobs:
         run: west zephyr-export
 
       - name: West Build (Cradio/Sweep Left)
-        run: west build -s zmk/app -b nice_nano -- -DSHIELD=cradio_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build -s zmk/app -b nice_nano -S zmk-usb-logging -- -DSHIELD=cradio_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
 
       - name: Cradio/Sweep Left Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
