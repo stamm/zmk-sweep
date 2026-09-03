@@ -4,9 +4,9 @@ name: Build
 
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     container:
-      image: zmkfirmware/zmk-build-arm:4.1-branch
+      image: zmkfirmware/zmk-build-arm:4.4-branch
     name: Build
     steps:
       - name: Checkout
