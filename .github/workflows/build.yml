@@ -35,6 +35,18 @@ jobs:
       - name: West Update
         run: west update
 
+      - name: Check toolchain matches pinned Zephyr
+        run: |
+          pinned=$(west list -f "{revision}" zephyr)
+          image="${ZEPHYR_VERSION:-unknown}"
+          echo "Pinned Zephyr: ${pinned} / container image ZEPHYR_VERSION: ${image}"
+          if [ "${image}" = "unknown" ]; then
+            echo "::notice::container image exposes no ZEPHYR_VERSION, skipping toolchain check"
+          elif ! printf '%s' "${pinned}" | grep -q "${image}"; then
+            echo "::error::container image is built for Zephyr ${image} but the manifest pins ${pinned}; use the zmk-build-arm tag matching the pinned Zephyr"
+            exit 1
+          fi
+
       - name: West Zephyr export
         run: west zephyr-export
 

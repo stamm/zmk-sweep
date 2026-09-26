@@ -41,6 +41,8 @@ west build --pristine
 **CI/CD:**
 - GitHub Actions workflow in `.github/workflows/build.yml` handles automated builds
 - Workflow builds both left and right halves and creates UF2 files for flashing
+- The container image tag must match the Zephyr version pinned in `zmk/app/west.yml` (imported through `config/west.yml`): Zephyr 4.1 → `zmkfirmware/zmk-build-arm:4.1`. A newer image (e.g. `4.4-branch`, Zephyr 4.4 + SDK 1.0.1) ships a newer CMake that cannot configure Zephyr 4.1 (`FindZephyr-sdk.cmake: ... Unknown arguments specified`). The `Check toolchain matches pinned Zephyr` step fails fast on a mismatch.
+- Board id under ZMK's HWMv2 naming is `nice_nano//zmk` (= `nice_nano@2.0.0//zmk`); `nice_nano_v2` no longer exists.
 
 ## Code Style Guidelines
 
