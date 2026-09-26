@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     container:
-      image: zmkfirmware/zmk-build-arm:4.4-branch
+      image: zmkfirmware/zmk-build-arm:4.1
     name: Build
     steps:
       - name: Checkout
@@ -58,7 +58,7 @@ jobs:
 
         
       - name: West Build (Cradio/Sweep reset)
-        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=settings_reset -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build --pristine -s zmk/app -b 'nice_nano//zmk' -- -DSHIELD=settings_reset -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
 
       - name: Cradio/Sweep reset Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
