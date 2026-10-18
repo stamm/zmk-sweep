@@ -20,6 +20,8 @@ parse_config:
     "&hmr RGUI DOWN": {t: "↓", h: RGUI}
     "&hmr RSHIFT UP": {t: "↑", h: RSHIFT}
     "&hmr RCTRL RIGHT": {t: "→", h: RCTRL}
+    "&kp C_PP": "⏵︎/⏸︎"
+    "&kp C_NEXT": "⏩︎"
   # Mark every key that can be held to reach a layer, not just the first sequence
   # found: LOWER is reachable from TAB or ESC and RAISE from RET or SPACE, so
   # highlighting a single thumb key per layer misrepresents the keymap.

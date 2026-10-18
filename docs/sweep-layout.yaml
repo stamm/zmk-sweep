@@ -96,8 +96,8 @@ layers:
   - (
   - )
   - '-'
-  - PP
-  - NEXT
+  - ⏵︎/⏸︎
+  - ⏩︎
   - VOL DN
   - VOL UP
   - {t: ▽, type: trans}
