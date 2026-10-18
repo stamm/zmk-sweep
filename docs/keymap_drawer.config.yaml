@@ -6,12 +6,20 @@ draw_config:
   separate_combo_diagrams: true
   # Light mode only: the dark variant has no background of its own, so its light
   # strokes and headers would be invisible on GitHub's light theme.
-  dark_mode: false
+  dark_mode: auto
 
 parse_config:
   raw_binding_map:
     # `&bootloader` would otherwise be drawn verbatim; BOOT is shorter and fits.
     "&bootloader": BOOT
+    "&kp F16": →EN
+    "&kp F17": →RU
+    "&kp KP_MULTIPLY": "*"
+    "&kp KP_DIVIDE": "/"
+    "&kp LEFT": "←"
+    "&hmr RGUI DOWN": {t: "↓", h: RGUI}
+    "&hmr RSHIFT UP": {t: "↑", h: RSHIFT}
+    "&hmr RCTRL RIGHT": {t: "→", h: RCTRL}
   # Mark every key that can be held to reach a layer, not just the first sequence
   # found: LOWER is reachable from TAB or ESC and RAISE from RET or SPACE, so
   # highlighting a single thumb key per layer misrepresents the keymap.

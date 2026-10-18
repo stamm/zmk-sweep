@@ -40,17 +40,17 @@ layers:
   - F7
   - F6
   - F5
-  - KP MULTIPLY
+  - '*'
   - '-'
   - '4'
   - '5'
   - '6'
-  - F17
+  - →RU
   - {t: F4, h: LALT}
   - {t: F3, h: LCTL}
   - {t: F2, h: LSHIFT}
   - {t: F1, h: LGUI}
-  - KP DIVIDE
+  - /
   - KP DOT
   - {t: '0', h: RGUI}
   - {t: '1', h: RSHIFT}
@@ -74,10 +74,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '='
-  - F16
+  - →EN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F17
+  - →RU
   - BSPC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -86,10 +86,10 @@ layers:
   - {t: '[', h: LSHIFT}
   - {t: ']', h: LGUI}
   - ''''
-  - LEFT
-  - {t: DOWN, h: RGUI}
-  - {t: UP, h: RSHIFT}
-  - {t: RIGHT, h: RCTRL}
+  - ←
+  - {t: ↓, h: RGUI}
+  - {t: ↑, h: RSHIFT}
+  - {t: →, h: RCTRL}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - _
