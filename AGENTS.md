@@ -43,6 +43,17 @@ west build --pristine
 - Workflow builds both left and right halves and creates UF2 files for flashing
 - The container image tag must match the Zephyr version pinned in `zmk/app/west.yml` (imported through `config/west.yml`): Zephyr 4.1 → `zmkfirmware/zmk-build-arm:4.1`. A newer image (e.g. `4.4-branch`, Zephyr 4.4 + SDK 1.0.1) ships a newer CMake that cannot configure Zephyr 4.1 (`FindZephyr-sdk.cmake: ... Unknown arguments specified`). The `Check toolchain matches pinned Zephyr` step fails fast on a mismatch.
 - Board id under ZMK's HWMv2 naming is `nice_nano//zmk` (= `nice_nano@2.0.0//zmk`); `nice_nano_v2` no longer exists.
+- `.github/workflows/layout.yml` regenerates the README layout diagram and fails if it no longer matches the keymap.
+
+**Layout Diagram:**
+```bash
+# Regenerate docs/sweep-layout.svg (linked from README.md) from config/cradio.keymap
+./scripts/gen-layout.sh
+```
+- The diagram is produced by `keymap-drawer`, run through `uvx` with pinned versions: `keymap-drawer==0.21.0`, `tree-sitter<0.25`, `tree-sitter-devicetree==0.14.0`. Do not unpin `tree-sitter`: 0.25 dropped `Language.query`, which keymap-drawer 0.21.0 still calls, while `tree-sitter-devicetree` 0.15 requires tree-sitter 0.25 — so parsing breaks either way until keymap-drawer is upgraded.
+- Draw settings (combos as a separate block, `&bootloader` legend, theme) live in `docs/keymap_drawer.config.yaml`.
+- The ZMK physical layout for `cradio` comes from keymap-drawer's bundled layout table, so generation needs no network access.
+- Whenever `config/cradio.keymap` changes, rerun the script and commit `docs/sweep-layout.svg` and `docs/sweep-layout.yaml`; the Layout CI job enforces this.
 
 ## Code Style Guidelines
 
@@ -51,6 +62,8 @@ west build --pristine
 - `config/cradio.keymap` - Main keymap definition
 - `config/cradio.conf` - Hardware and firmware configuration
 - `config/west.yml` - West manifest for dependencies
+- `docs/` - Generated layout diagram (`sweep-layout.svg`, `sweep-layout.yaml`) and its keymap-drawer settings
+- `scripts/gen-layout.sh` - Regenerates the layout diagram from the keymap
 
 ### Devicetree (.keymap files) Style
 - Use tabs for indentation (ZMK convention)

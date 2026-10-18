@@ -1,0 +1,27 @@
+on: [push, pull_request, workflow_dispatch]
+
+name: Layout
+
+jobs:
+  layout:
+    runs-on: ubuntu-24.04
+    name: Layout diagram is up to date
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Install uv
+        # Bump deliberately: the diagram is generated with the pinned
+        # keymap-drawer version in scripts/gen-layout.sh, not with this one.
+        uses: astral-sh/setup-uv@v10.3.0
+
+      - name: Regenerate layout diagram
+        run: ./scripts/gen-layout.sh
+
+      - name: Fail if the committed diagram is stale
+        run: |
+          if ! git diff --exit-code -- docs/; then
+            echo "::error::docs/sweep-layout.svg does not match config/cradio.keymap; run ./scripts/gen-layout.sh and commit the result"
+            exit 1
+          fi
+          echo "::notice::layout diagram matches the keymap"

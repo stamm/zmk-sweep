@@ -1,0 +1,14 @@
+# Settings for keymap-drawer, used by scripts/gen-layout.sh and the Layout CI job.
+# See `keymap dump-config` for the full list of options and their defaults.
+draw_config:
+  # Draw combos as a separate diagram inside each layer they apply to,
+  # instead of badges overlapping the keys themselves.
+  separate_combo_diagrams: true
+  # Light mode only: the dark variant has no background of its own, so its light
+  # strokes and headers would be invisible on GitHub's light theme.
+  dark_mode: false
+
+parse_config:
+  raw_binding_map:
+    # `&bootloader` would otherwise be drawn verbatim; BOOT is shorter and fits.
+    "&bootloader": BOOT
